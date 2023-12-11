@@ -1,0 +1,66 @@
+xst -intstyle ise -ifn "C:/Users/User/Desktop/shit/ricemachine/ricemachine.xst" -ofn "C:/Users/User/Desktop/shit/ricemachine/ricemachine.syr" 
+xst -intstyle ise -ifn "C:/Users/User/Desktop/shit/ricemachine/ricemachine.xst" -ofn "C:/Users/User/Desktop/shit/ricemachine/ricemachine.syr" 
+xst -intstyle ise -ifn "C:/Users/User/Desktop/shit/ricemachine/ricemachine.xst" -ofn "C:/Users/User/Desktop/shit/ricemachine/ricemachine.syr" 
+xst -intstyle ise -ifn "C:/Users/User/Desktop/shit/ricemachine/ricemachine.xst" -ofn "C:/Users/User/Desktop/shit/ricemachine/ricemachine.syr" 
+xst -intstyle ise -ifn "C:/Users/User/Desktop/shit/ricemachine/ricemachine.xst" -ofn "C:/Users/User/Desktop/shit/ricemachine/ricemachine.syr" 
+xst -intstyle ise -ifn "C:/Users/User/Desktop/shit/ricemachine/ricemachine.xst" -ofn "C:/Users/User/Desktop/shit/ricemachine/ricemachine.syr" 
+xst -intstyle ise -ifn "C:/Users/User/Desktop/shit/ricemachine/ricemachine.xst" -ofn "C:/Users/User/Desktop/shit/ricemachine/ricemachine.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 ricemachine.ngc ricemachine.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ricemachine_map.ncd ricemachine.ngd ricemachine.pcf 
+par -w -intstyle ise -ol high -mt off ricemachine_map.ncd ricemachine.ncd ricemachine.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ricemachine.twx ricemachine.ncd -o ricemachine.twr ricemachine.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ricemachine.ucf -p xc6slx16-csg324-3 ricemachine.ngc ricemachine.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ricemachine_map.ncd ricemachine.ngd ricemachine.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ricemachine.ucf -p xc6slx16-csg324-3 ricemachine.ngc ricemachine.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ricemachine_map.ncd ricemachine.ngd ricemachine.pcf 
+par -w -intstyle ise -ol high -mt off ricemachine_map.ncd ricemachine.ncd ricemachine.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ricemachine.twx ricemachine.ncd -o ricemachine.twr ricemachine.pcf -ucf ricemachine.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ricemachine.ucf -p xc6slx16-csg324-3 ricemachine.ngc ricemachine.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ricemachine_map.ncd ricemachine.ngd ricemachine.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ricemachine.ucf -p xc6slx16-csg324-3 ricemachine.ngc ricemachine.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ricemachine_map.ncd ricemachine.ngd ricemachine.pcf 
+par -w -intstyle ise -ol high -mt off ricemachine_map.ncd ricemachine.ncd ricemachine.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ricemachine.twx ricemachine.ncd -o ricemachine.twr ricemachine.pcf -ucf ricemachine.ucf 
+bitgen -intstyle ise -f ricemachine.ut ricemachine.ncd 
+bitgen -intstyle ise -f ricemachine.ut ricemachine.ncd 
+xst -intstyle ise -ifn "C:/Users/User/Desktop/shit/ricemachine/ricemachine.xst" -ofn "C:/Users/User/Desktop/shit/ricemachine/ricemachine.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ricemachine.ucf -p xc6slx16-csg324-3 ricemachine.ngc ricemachine.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ricemachine_map.ncd ricemachine.ngd ricemachine.pcf 
+par -w -intstyle ise -ol high -mt off ricemachine_map.ncd ricemachine.ncd ricemachine.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ricemachine.twx ricemachine.ncd -o ricemachine.twr ricemachine.pcf -ucf ricemachine.ucf 
+bitgen -intstyle ise -f ricemachine.ut ricemachine.ncd 
+xst -intstyle ise -ifn "C:/Users/User/Desktop/shit/ricemachine/ricemachine.xst" -ofn "C:/Users/User/Desktop/shit/ricemachine/ricemachine.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ricemachine.ucf -p xc6slx16-csg324-3 ricemachine.ngc ricemachine.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ricemachine_map.ncd ricemachine.ngd ricemachine.pcf 
+par -w -intstyle ise -ol high -mt off ricemachine_map.ncd ricemachine.ncd ricemachine.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ricemachine.twx ricemachine.ncd -o ricemachine.twr ricemachine.pcf -ucf ricemachine.ucf 
+xst -intstyle ise -ifn "C:/Users/User/Desktop/shit/ricemachine/ricemachine.xst" -ofn "C:/Users/User/Desktop/shit/ricemachine/ricemachine.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ricemachine.ucf -p xc6slx16-csg324-3 ricemachine.ngc ricemachine.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ricemachine_map.ncd ricemachine.ngd ricemachine.pcf 
+par -w -intstyle ise -ol high -mt off ricemachine_map.ncd ricemachine.ncd ricemachine.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ricemachine.twx ricemachine.ncd -o ricemachine.twr ricemachine.pcf -ucf ricemachine.ucf 
+bitgen -intstyle ise -f ricemachine.ut ricemachine.ncd 
+xst -intstyle ise -ifn "C:/Users/User/Desktop/shit/ricemachine/ricemachine.xst" -ofn "C:/Users/User/Desktop/shit/ricemachine/ricemachine.syr" 
+xst -intstyle ise -ifn "C:/Users/User/Desktop/shit/ricemachine/ricemachine.xst" -ofn "C:/Users/User/Desktop/shit/ricemachine/ricemachine.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ricemachine.ucf -p xc6slx16-csg324-3 ricemachine.ngc ricemachine.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ricemachine_map.ncd ricemachine.ngd ricemachine.pcf 
+par -w -intstyle ise -ol high -mt off ricemachine_map.ncd ricemachine.ncd ricemachine.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ricemachine.twx ricemachine.ncd -o ricemachine.twr ricemachine.pcf -ucf ricemachine.ucf 
+xst -intstyle ise -ifn "C:/Users/User/Desktop/shit/ricemachine/ricemachine.xst" -ofn "C:/Users/User/Desktop/shit/ricemachine/ricemachine.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ricemachine.ucf -p xc6slx16-csg324-3 ricemachine.ngc ricemachine.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ricemachine_map.ncd ricemachine.ngd ricemachine.pcf 
+par -w -intstyle ise -ol high -mt off ricemachine_map.ncd ricemachine.ncd ricemachine.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ricemachine.twx ricemachine.ncd -o ricemachine.twr ricemachine.pcf -ucf ricemachine.ucf 
+bitgen -intstyle ise -f ricemachine.ut ricemachine.ncd 
+xst -intstyle ise -ifn "C:/Users/User/Desktop/shit/ricemachine/ricemachine.xst" -ofn "C:/Users/User/Desktop/shit/ricemachine/ricemachine.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ricemachine.ucf -p xc6slx16-csg324-3 ricemachine.ngc ricemachine.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ricemachine_map.ncd ricemachine.ngd ricemachine.pcf 
+par -w -intstyle ise -ol high -mt off ricemachine_map.ncd ricemachine.ncd ricemachine.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ricemachine.twx ricemachine.ncd -o ricemachine.twr ricemachine.pcf -ucf ricemachine.ucf 
+bitgen -intstyle ise -f ricemachine.ut ricemachine.ncd 
+xst -intstyle ise -ifn "C:/Users/User/Desktop/shit/ricemachine/ricemachine.xst" -ofn "C:/Users/User/Desktop/shit/ricemachine/ricemachine.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ricemachine.ucf -p xc6slx16-csg324-3 ricemachine.ngc ricemachine.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ricemachine_map.ncd ricemachine.ngd ricemachine.pcf 
+par -w -intstyle ise -ol high -mt off ricemachine_map.ncd ricemachine.ncd ricemachine.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ricemachine.twx ricemachine.ncd -o ricemachine.twr ricemachine.pcf -ucf ricemachine.ucf 
+bitgen -intstyle ise -f ricemachine.ut ricemachine.ncd 

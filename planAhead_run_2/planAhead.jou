@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Mon Dec 04 11:01:12 2023
+# Process ID: 5440
+# Log file: C:/Users/User/Desktop/shit/ricemachine/planAhead_run_2/planAhead.log
+# Journal file: C:/Users/User/Desktop/shit/ricemachine/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/User/Desktop/shit/ricemachine/pa.fromNetlist.tcl

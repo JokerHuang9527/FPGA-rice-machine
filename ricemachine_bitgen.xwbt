@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\User\Desktop\shit\ricemachine\ricemachine.ncd
+OUTFILE=C:\Users\User\Desktop\shit\ricemachine\ricemachine.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\User\Desktop\shit\ricemachine
+LICENSE=WebPack
+USER_INFO=212209677_0_0_330

@@ -1,0 +1,550 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: ricemachine.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ricemachine.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ricemachine"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : ricemachine
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\User\Desktop\shit\ricemachine\ricemachine.v" into library work
+Parsing module <ricemachine>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <ricemachine>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <ricemachine>.
+    Related source file is "C:\Users\User\Desktop\shit\ricemachine\ricemachine.v".
+    Found 32-bit register for signal <op1>.
+    Found 32-bit register for signal <op0>.
+    Found 32-bit register for signal <tick>.
+    Found 1-bit register for signal <dclk>.
+    Found 32-bit adder for signal <tick[31]_GND_1_o_add_2_OUT> created at line 41.
+    Found 32-bit adder for signal <op0[31]_GND_1_o_add_10_OUT> created at line 54.
+    Found 32-bit adder for signal <op1[31]_GND_1_o_add_13_OUT> created at line 57.
+WARNING:Xst:737 - Found 1-bit latch for signal <led<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <led<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 32-bit comparator lessequal for signal <n0008> created at line 53
+    Found 32-bit comparator lessequal for signal <n0012> created at line 56
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  97 D-type flip-flop(s).
+	inferred   2 Latch(s).
+	inferred   2 Comparator(s).
+	inferred   6 Multiplexer(s).
+Unit <ricemachine> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 32-bit adder                                          : 3
+# Registers                                            : 4
+ 1-bit register                                        : 1
+ 32-bit register                                       : 3
+# Latches                                              : 2
+ 1-bit latch                                           : 2
+# Comparators                                          : 2
+ 32-bit comparator lessequal                           : 2
+# Multiplexers                                         : 6
+ 1-bit 2-to-1 multiplexer                              : 3
+ 32-bit 2-to-1 multiplexer                             : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <ricemachine>.
+The following registers are absorbed into counter <tick>: 1 register on signal <tick>.
+The following registers are absorbed into counter <op1>: 1 register on signal <op1>.
+The following registers are absorbed into counter <op0>: 1 register on signal <op0>.
+Unit <ricemachine> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 3
+ 32-bit up counter                                     : 3
+# Registers                                            : 1
+ Flip-Flops                                            : 1
+# Comparators                                          : 2
+ 32-bit comparator lessequal                           : 2
+# Multiplexers                                         : 3
+ 1-bit 2-to-1 multiplexer                              : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <ricemachine> ...
+WARNING:Xst:1710 - FF/Latch <op1_31> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op1_29> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op1_30> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op0_3> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op0_4> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op0_7> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op0_5> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op0_6> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op0_8> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op0_9> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op0_10> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op0_11> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op0_12> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op0_13> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op0_16> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op0_14> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op0_15> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op0_17> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op0_18> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op0_19> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op0_20> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op0_21> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op0_22> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op0_25> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op0_23> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op0_24> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op0_26> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op0_27> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op0_28> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op0_29> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op0_30> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op0_31> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tick_26> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tick_27> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tick_28> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tick_29> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tick_30> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tick_31> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op1_4> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op1_3> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op1_5> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op1_6> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op1_7> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op1_8> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op1_9> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op1_10> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op1_13> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op1_11> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op1_12> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op1_14> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op1_15> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op1_16> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op1_17> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op1_18> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op1_19> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op1_22> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op1_20> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op1_21> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op1_23> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op1_24> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op1_25> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op1_26> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op1_27> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op1_28> (without init value) has a constant value of 0 in block <ricemachine>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ricemachine, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 33
+ Flip-Flops                                            : 33
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : ricemachine.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 157
+#      GND                         : 1
+#      INV                         : 5
+#      LUT1                        : 29
+#      LUT2                        : 27
+#      LUT3                        : 2
+#      LUT5                        : 6
+#      LUT6                        : 11
+#      MUXCY                       : 43
+#      VCC                         : 1
+#      XORCY                       : 32
+# FlipFlops/Latches                : 35
+#      FDC                         : 30
+#      FDCE                        : 1
+#      FDP                         : 2
+#      LDE_1                       : 2
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 4
+#      IBUF                        : 2
+#      OBUF                        : 2
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              33  out of  18224     0%  
+ Number of Slice LUTs:                   80  out of   9112     0%  
+    Number used as Logic:                80  out of   9112     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     80
+   Number with an unused Flip Flop:      47  out of     80    58%  
+   Number with an unused LUT:             0  out of     80     0%  
+   Number of fully used LUT-FF pairs:    33  out of     80    41%  
+   Number of unique control sets:         4
+
+IO Utilization: 
+ Number of IOs:                           5
+ Number of bonded IOBs:                   5  out of    232     2%  
+    IOB Flip Flops/Latches:               2
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 27    |
+reset                              | IBUF+BUFG              | 2     |
+dclk                               | NONE(op1_0)            | 6     |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.998ns (Maximum Frequency: 250.150MHz)
+   Minimum input arrival time before clock: 3.557ns
+   Maximum output required time after clock: 3.648ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.998ns (frequency: 250.150MHz)
+  Total number of paths / destination ports: 1054 / 28
+-------------------------------------------------------------------------
+Delay:               3.998ns (Levels of Logic = 3)
+  Source:            tick_8 (FF)
+  Destination:       tick_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: tick_8 to tick_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.447   0.981  tick_8 (tick_8)
+     LUT6:I0->O            3   0.203   0.898  tick[31]_GND_1_o_equal_2_o<31>4 (tick[31]_GND_1_o_equal_2_o<31>3)
+     LUT6:I2->O           14   0.203   0.958  tick[31]_GND_1_o_equal_2_o<31>5 (tick[31]_GND_1_o_equal_2_o)
+     LUT2:I1->O            1   0.205   0.000  Mcount_tick_eqn_01 (Mcount_tick_eqn_0)
+     FDC:D                     0.102          tick_0
+    ----------------------------------------
+    Total                      3.998ns (1.160ns logic, 2.838ns route)
+                                       (29.0% logic, 71.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'dclk'
+  Clock period: 3.190ns (frequency: 313.450MHz)
+  Total number of paths / destination ports: 78 / 6
+-------------------------------------------------------------------------
+Delay:               3.190ns (Levels of Logic = 2)
+  Source:            op0_2 (FF)
+  Destination:       op1_1 (FF)
+  Source Clock:      dclk rising
+  Destination Clock: dclk rising
+
+  Data Path: op0_2 to op1_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              8   0.447   1.147  op0_2 (op0_2)
+     LUT6:I1->O            6   0.203   1.089  op1[31]_op0[31]_OR_32_o1 (op1[31]_op0[31]_OR_32_o)
+     LUT5:I0->O            1   0.203   0.000  op1_1_rstpot (op1_1_rstpot)
+     FDC:D                     0.102          op1_1
+    ----------------------------------------
+    Total                      3.190ns (0.955ns logic, 2.235ns route)
+                                       (29.9% logic, 70.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 27 / 27
+-------------------------------------------------------------------------
+Offset:              2.957ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       dclk (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to dclk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            33   1.222   1.305  reset_IBUF (reset_IBUF)
+     FDCE:CLR                  0.430          dclk
+    ----------------------------------------
+    Total                      2.957ns (1.652ns logic, 1.305ns route)
+                                       (55.9% logic, 44.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'reset'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              3.557ns (Levels of Logic = 2)
+  Source:            sw (PAD)
+  Destination:       led_0 (LATCH)
+  Destination Clock: reset rising
+
+  Data Path: sw to led_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             9   1.222   1.194  sw_IBUF (sw_IBUF)
+     LUT6:I0->O            2   0.203   0.616  Mmux_sw_op0[31]_MUX_68_o1 (sw_op0[31]_MUX_68_o)
+     LDE_1:GE                  0.322          led_0
+    ----------------------------------------
+    Total                      3.557ns (1.747ns logic, 1.810ns route)
+                                       (49.1% logic, 50.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'dclk'
+  Total number of paths / destination ports: 12 / 12
+-------------------------------------------------------------------------
+Offset:              2.957ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       op1_0 (FF)
+  Destination Clock: dclk rising
+
+  Data Path: reset to op1_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            33   1.222   1.305  reset_IBUF (reset_IBUF)
+     FDP:PRE                   0.430          op1_0
+    ----------------------------------------
+    Total                      2.957ns (1.652ns logic, 1.305ns route)
+                                       (55.9% logic, 44.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'reset'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              3.648ns (Levels of Logic = 1)
+  Source:            led_1 (LATCH)
+  Destination:       led<1> (PAD)
+  Source Clock:      reset rising
+
+  Data Path: led_1 to led<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE_1:G->Q            1   0.498   0.579  led_1 (led_1)
+     OBUF:I->O                 2.571          led_1_OBUF (led<1>)
+    ----------------------------------------
+    Total                      3.648ns (3.069ns logic, 0.579ns route)
+                                       (84.1% logic, 15.9% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.998|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock dclk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+dclk           |    3.190|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock reset
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+dclk           |    3.251|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.14 secs
+ 
+--> 
+
+Total memory usage is 4486236 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   66 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

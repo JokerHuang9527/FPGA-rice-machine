@@ -1,0 +1,14 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon Dec 04 11:31:59 2023
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "led<0>" LOCATE = SITE "C14" LEVEL 1;
+COMP "led<1>" LOCATE = SITE "E13" LEVEL 1;
+COMP "clk" LOCATE = SITE "K15" LEVEL 1;
+COMP "sw" LOCATE = SITE "D14" LEVEL 1;
+COMP "reset" LOCATE = SITE "N4" LEVEL 1;
+PIN reset_pin<0> = BEL "reset" PINNAME PAD;
+PIN "reset_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+SCHEMATIC END;
+

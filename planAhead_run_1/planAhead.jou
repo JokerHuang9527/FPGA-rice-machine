@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Mon Dec 04 11:01:09 2023
+# Process ID: 1444
+# Log file: C:/Users/User/Desktop/shit/ricemachine/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/User/Desktop/shit/ricemachine/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/User/Desktop/shit/ricemachine/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+set_property package_pin "" [get_ports [list  {led[1]}]]
+set_property package_pin "" [get_ports [list  clk]]
+startgroup
+set_property package_pin E13 [get_ports {led[1]}]
+endgroup
+startgroup
+set_property package_pin C14 [get_ports {led[0]}]
+endgroup
+startgroup
+set_property package_pin K15 [get_ports clk]
+endgroup
+startgroup
+set_property package_pin N4 [get_ports reset]
+endgroup
+startgroup
+set_property package_pin D14 [get_ports sw]
+endgroup
+save_constraints
